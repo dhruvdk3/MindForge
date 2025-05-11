@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Face Recognition App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+</head>
+<body>
+    <h1 id = "face">TestSentry</h1>
+    <div id="face-features">
+        
+        <form method="post" action="/recognize-face">
+            <button type="submit">Recognize Face</button>
+        </form>
+        <form method="post" action="/detect-face">
+            <button type="submit">Detect Face and Store</button>
+        </form>
+    </div>
+    <div id="quiz-container">
+        <h1 id="quiz-app">Quiz App</h1>
+        <div id="question-container">
+            <p id="question-text"></p>
+            <ol id="answer-list">
+                <!-- Options will be added here dynamically -->
+            </ol>
+        </div>
+        <p id="score">Score: 0</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    
+</body>
+</html>
